@@ -1,0 +1,17 @@
+﻿@import '../StyleBase/Mixins/Flex';
+@import '../StyleBase/Constants';
+
+.nav-container {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    text-align: left;
+
+    .nav-item {
+        background-color: $background-dark;
+        color: $light-font-color;
+        flex: 1 1 20%;
+        height: 100%;
+        margin: 0 20px;
+    }
+}
