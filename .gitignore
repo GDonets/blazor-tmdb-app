@@ -2,7 +2,9 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/.vs
-/bin/Debug/netstandard2.1/wwwroot/_framework/_bin
-/obj
-/bin/Debug/netstandard2.1
+/src/.vs
+/src/obj
+/src/bin
+*.suo
+/.vs/BlazorTmdbApp/DesignTimeBuild/.dtbcache.v2
+/src/BlazorTmdbApp.csproj.user
