@@ -1,5 +1,7 @@
 ﻿@import './Shared/MainLayout';
 @import './Shared/NavMenu';
+@import './Components/SearchBarComponent/SearchBar';
+@import './Pages/Index';
 
 body {
     width: 100%;

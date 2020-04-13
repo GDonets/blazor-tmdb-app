@@ -1,19 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BlazorOmdbTest.Store
+﻿namespace BlazorOmdbTest.Store
 {
     public enum ApplicationTrigger
     {
-        SeeCategories,
+        Categories,
         SelectCategory,
-        SeeActors,
+        Cast,
         SelectActor,
         Search,
-        SeeMovies,
-        SelectMovie,
-        GoHome
+        Movies,
+        MovieCard,
+        TVShows,
+        TVShowCard,
+        Home
     }
 }

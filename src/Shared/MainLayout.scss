@@ -1,23 +1,34 @@
-﻿@import '../StyleBase/Mixins/Flex';
-@import '../StyleBase/Constants';
+﻿@import '../Settings/Mixins/_flex';
+@import '../Settings/_colors';
+@import '../Settings/_layouts';
+
+$header-container-height: 54px;
 
 .wrapper {
     display: flex;
     @include flex-flow(row wrap);
-    font-weight: bold;
     text-align: center;
 }
 
 .wrapper > * {
-    padding: 10px;
     @include flex(1 100%);
+    padding: 0 10px;
 }
 
 .header-container {
-    height: 10%;
-    min-height: 20px;
-    max-height: 100px;
+    display: flex;
     background-color: $background-dark;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $header-container-height;
+    width: 100vw;
+    z-index: 10;
+}
+
+.page-container {
+    position: relative;
+    top: $header-container-height;
 }
 
 .footer {
@@ -25,39 +36,14 @@
 }
 
 .content {
+    max-width: 1300px;
     text-align: left;
-    background: $background-dark;
-}
-
-.aside-1 {
-    background: gold;
-}
-
-.aside-2 {
-    background: hotpink;
-}
-
-@media all and (min-width: $screen-width-small) {
-    .aside {
-        @include flex(1 0 0);
-    }
 }
 
 @media all and (min-width: $screen-width-large) {
     .main {
         @include flex(3 0px);
-    }
-
-    .aside-1 {
-        order: 1;
-    }
-
-    .main {
         order: 2;
-    }
-
-    .aside-2 {
-        order: 3;
     }
 
     .footer {

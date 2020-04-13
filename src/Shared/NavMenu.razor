@@ -1,9 +1,25 @@
-﻿
+﻿@using BlazorOmdbTest.Store
+
 <div class="nav-container">
     <ul class="nav">
         <li class="nav-item">
             <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
                 <span class="oi oi-home" aria-hidden="true"></span> Home
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="@ApplicationTrigger.Movies">
+                <span class="oi oi-home" aria-hidden="true"></span> Movies
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="@ApplicationTrigger.TVShows">
+                <span class="oi oi-home" aria-hidden="true"></span> TV Shows
+            </NavLink>
+        </li>
+        <li class="nav-item">
+            <NavLink class="nav-link" href="@ApplicationTrigger.Cast">
+                <span class="oi oi-home" aria-hidden="true"></span> Cast
             </NavLink>
         </li>
     </ul>

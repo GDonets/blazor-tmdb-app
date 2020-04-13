@@ -1,17 +1,31 @@
-﻿@import '../StyleBase/Mixins/Flex';
-@import '../StyleBase/Constants';
+﻿@import '../Settings/Mixins/_flex';
+@import '../Settings/_colors';
 
 .nav-container {
-    height: 100%;
+    width: 100vw;
     display: flex;
-    flex-flow: row nowrap;
-    text-align: left;
+    @include justify-content(flex-start);
 
-    .nav-item {
-        background-color: $background-dark;
-        color: $light-font-color;
-        flex: 1 1 20%;
+    ul {
         height: 100%;
-        margin: 0 20px;
+        display: flex;
+        @include flex-flow(row nowrap);
+        @include justify-content(flex-start);
+        margin: 0 10px;
+
+        .nav-item {
+            display: flex;
+            @include flex-shrink(0);
+            background-color: $background-dark;
+            color: $font-color-white;
+            margin: 20px;
+            font-weight: 700;
+            align-content: center;
+
+            :hover {
+                cursor: default;
+                color: $font-color-active;
+            }
+        }
     }
 }

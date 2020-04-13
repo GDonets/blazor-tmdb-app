@@ -1,0 +1,44 @@
+﻿@import '../../Settings/Mixins/_flex';
+@import '../../Settings/_colors';
+
+$search-bar-height: 30px;
+$search-bar-radius: 10px;
+$input-margin: 20px 0;
+
+.search-bar {
+    display: flex;
+    @include flex-flow(row nowrap);
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    input {
+        width: 100%;
+        height: $search-bar-height;
+        line-height: 50px;
+        color: $font-color-light-grey;
+        border-radius: $search-bar-radius;
+        border: none;
+        padding: 10px 20px;
+        margin: $input-margin;
+    }
+
+    .search-button {
+        color: $font-color-white;
+        background: $background-dark;
+        font-weight: 700;
+        line-height: $search-bar-height;
+        border-radius: $search-bar-radius;
+        border: none;
+        position: absolute;
+        padding: 10px 30px;
+        right: 0;
+        margin: $input-margin;
+    }
+
+    .search-button:hover {
+        color: $font-color-active;
+    }
+}
