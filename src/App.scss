@@ -1,6 +1,8 @@
 ﻿@import './Shared/MainLayout';
 @import './Shared/NavMenu';
-@import './Components/SearchBarComponent/SearchBar';
+@import './Components/SearchBar/SearchBar';
+@import './Components/MovieCard/MovieCard';
+@import './Components/MovieBoard/MovieBoard';
 @import './Pages/Index';
 
 body {

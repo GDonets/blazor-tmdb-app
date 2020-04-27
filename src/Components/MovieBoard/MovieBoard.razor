@@ -1,0 +1,41 @@
+﻿@using BlazorOmdbTest.Models
+@using BlazorOmdbTest.Components.MovieCard
+@inject HttpClient Http
+
+<div class="movie-board">
+    <div class="wrapper">
+        <div class="row-wrapper">
+            <h2>Popular</h2>
+            <div class="row-content scroller">
+                @foreach (var movie in _popularMovies.Results) 
+                {
+                    var movieId = movie.Id;
+
+                    <MovieCard Movie="@movie" @onclick="@(e => OnMovieCardClicked(e, movieId))"/>
+                }
+            </div>
+        </div>
+        <div class="row-wrapper">
+            <h2>Latest</h2>
+            <div class="row-content scroller">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    private MovieInfoResult _popularMovies;
+    private MovieInfoResult _latestMovies;
+
+    protected override async Task OnInitializedAsync()
+    {
+        //var res = await Http.GetAsync();
+    }
+
+    private void OnMovieCardClicked(MouseEventArgs e, int movieId)
+    { 
+    
+    }
+}

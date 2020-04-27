@@ -1,0 +1,37 @@
+﻿@import '../../Settings/Mixins/_flex';
+@import '../../Settings/_colors';
+@import '../../Settings/_layouts';
+
+.movie-board {
+
+    .wrapper {
+        @include flexbox();
+        @include flex-flow(column nowrap);
+    }
+
+    .wrapper > * {
+        @include flex(1 100%);
+    }
+
+    .row-wrapper {
+        @include flexbox();
+        @include flex-flow(column nowrap);
+    }
+
+    .row-content {
+        @include flexbox();
+        @include flex-flow(row nowrap);
+        @include justify-content(flex-start);
+        @include align-items(flex-start);
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .scroller {
+        width: 100%;
+        max-width: $site-max-width;
+        min-height: 355px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+}

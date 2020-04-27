@@ -1,0 +1,32 @@
+﻿@using BlazorOmdbTest.Models
+
+<div class="movie-card">
+    <div class="container">
+        <div class="wrapper">
+            <a class="image" href="" title="@Movie.Title">
+                <img 
+                     data-src=@($"{IMAGE_REPOSITORY_PATH}{IMAGE_SMALL_PREFIX}{Movie.Poster_path}")
+                     data-srcset=@($"{IMAGE_REPOSITORY_PATH}{IMAGE_SMALL_PREFIX}{Movie.Poster_path} 1x, {IMAGE_REPOSITORY_PATH}{IMAGE_BIG_PREFIX}{Movie.Poster_path} 2x")
+                     alt="" 
+                     src=@($"{IMAGE_REPOSITORY_PATH}{IMAGE_SMALL_PREFIX}{Movie.Poster_path}") 
+                     srcset=@($"{IMAGE_REPOSITORY_PATH}{IMAGE_SMALL_PREFIX}{Movie.Poster_path} 1x, {IMAGE_REPOSITORY_PATH}{IMAGE_BIG_PREFIX}{Movie.Poster_path} 2x")>
+            </a>
+        </div>
+        <div class="content">
+            <h2>@Movie.Title</h2>
+            <p>@Movie.Release_date</p>
+        </div>
+    </div>
+</div>
+
+@code {
+
+    //TODO: move to config
+    private const string IMAGE_REPOSITORY_PATH = "https://image.tmdb.org/t/p";
+    private const string IMAGE_SMALL_PREFIX = "/w220_and_h330_face";
+    private const string IMAGE_BIG_PREFIX = "/w440_and_h660_face";
+
+    [Parameter]
+    public MovieInfo Movie { get; set; }
+
+}

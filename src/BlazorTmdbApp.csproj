@@ -32,7 +32,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="Pages\SelectedMovie\" />
     <Folder Include="Shared\" />
     <Folder Include="Store\" />
     <Folder Include="Store\MoviesComponent\" />

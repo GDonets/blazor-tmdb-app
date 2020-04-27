@@ -2,68 +2,70 @@
 @import '../Settings/_colors';
 @import '../Settings/_layouts';
 
-.wrapper {
-    display: flex;
-    @include flex-flow(row wrap);
-    text-align: center;
-}
-
-.wrapper > * {
-    @include flex(1 100%);
-}
-
-.header {
-    display: flex;
-    @include flex-wrap(wrap);
-    @include justify-content(center);
-    @include align-content(flex-end);
-    min-height: 100px;
-    height: calc(100vh / 6);
-    max-height: 360px;
-    background-color: $background-medium;
-}
-
-.main {
-    text-align: left;
-}
-
-.aside-1 {
-    background: gold;
-}
-
-.aside-2 {
-    background: hotpink;
-}
-
-@media all and (min-width: $screen-width-small) {
-    .aside {
-        @include flex(1 0 0);
+.index-page {
+    .wrapper {
+        @include flexbox();
+        @include flex-flow(row wrap);
+        text-align: center;
     }
-}
 
-@media all and (min-width: $screen-width-large) {
+    .wrapper > * {
+        @include flex(1 100%);
+    }
+
+    .header {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include justify-content(center);
+        @include align-content(flex-end);
+        min-height: 100px;
+        height: calc(100vh / 6);
+        max-height: 360px;
+        background-color: $background-medium;
+    }
+
     .main {
-        @include flex(3 0px);
+        text-align: left;
     }
 
     .aside-1 {
-        order: 1;
-    }
-
-    .main {
-        order: 2;
+        background: gold;
     }
 
     .aside-2 {
-        order: 3;
+        background: hotpink;
     }
 
-    .footer {
-        order: 4;
+    @media all and (min-width: $screen-width-small) {
+        .aside {
+            @include flex(1 0 0);
+        }
     }
-}
 
-body {
-    padding: 2em;
+    @media all and (min-width: $screen-width-large) {
+        .main {
+            @include flex(3 0px);
+        }
+
+        .aside-1 {
+            order: 1;
+        }
+
+        .main {
+            order: 2;
+        }
+
+        .aside-2 {
+            order: 3;
+        }
+
+        .footer {
+            order: 4;
+        }
+    }
+
+    body {
+        padding: 2em;
+    }
 }
 

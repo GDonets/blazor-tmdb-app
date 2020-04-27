@@ -3,18 +3,18 @@
 
 .nav-container {
     width: 100vw;
-    display: flex;
+    @include flexbox();
     @include justify-content(flex-start);
 
     ul {
         height: 100%;
-        display: flex;
+        @include flexbox();
         @include flex-flow(row nowrap);
         @include justify-content(flex-start);
         margin: 0 10px;
 
         .nav-item {
-            display: flex;
+            @include flexbox();
             @include flex-shrink(0);
             background-color: $background-dark;
             color: $font-color-white;

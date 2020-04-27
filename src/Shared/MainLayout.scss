@@ -5,7 +5,7 @@
 $header-container-height: 54px;
 
 .wrapper {
-    display: flex;
+    @include flexbox();
     @include flex-flow(row wrap);
     text-align: center;
 }
@@ -16,7 +16,7 @@ $header-container-height: 54px;
 }
 
 .header-container {
-    display: flex;
+    @include flexbox();
     background-color: $background-dark;
     position: fixed;
     top: 0;
@@ -27,6 +27,7 @@ $header-container-height: 54px;
 }
 
 .page-container {
+    max-width: $site-max-width;
     position: relative;
     top: $header-container-height;
 }
@@ -36,7 +37,6 @@ $header-container-height: 54px;
 }
 
 .content {
-    max-width: 1300px;
     text-align: left;
 }
 
